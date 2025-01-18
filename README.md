@@ -26,7 +26,7 @@
 
 ## 動作手順
 
-1. スクリプトは指定されたキャンプサイトと日付に基づいて予約を試みます。予約が成功した場合は「Success!」と表示され、空きがない場合は「No vacancy」と表示されます。
+1. スクリプトは指定されたキャンプサイトと日付に基づいて予約を試みます。予約枠が空いていなかった場合はキャンセル待ちの為5分ごとに予約を試みます。
 
    - 予約するサイトと日付は`main.py`ファイル内で指定されています。以下のように指定されています。
 
@@ -43,6 +43,18 @@
    ```
 
 3. スクリプトの動作中にブラウザが自動で開き、予約手続きが進行します。予約に必要な情報を記入する時間が20分確保されています。
+
+## 指定可能なキャンプサイト
+
+以下のキャンプサイトを指定することができます。
+
+- キャンプ日帰り (`content.SITE_GROUP.campDay`)
+- キャンプ宿泊 (`content.SITE_GROUP.campStay`)
+- コテージ柏 (`content.SITE_GROUP.cottageKashiwa`)
+- 翠山荘 (`content.SITE_GROUP.suizanso`)
+- 毛無山荘 (`content.SITE_GROUP.kenashisan`)
+- 金山キャビン (`content.SITE_GROUP.kanayamaCabin`)
+- コロッケ (`content.SITE_GROUP.korokke`)
 
 ## 注意事項
 
