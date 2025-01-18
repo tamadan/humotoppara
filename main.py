@@ -26,8 +26,8 @@ def getCampStock(targetSite, targetDates):
                     print("予約枠の要素が見つかりませんでした")
                     break
             else:
-                print("空きなし 1分後に再検索")
-                time.sleep(60)
+                print("空きなし 30分後に再検索")
+                time.sleep(30 * 60)
         else:
             print(f"Failed with status code: {response.status_code}")
             break
